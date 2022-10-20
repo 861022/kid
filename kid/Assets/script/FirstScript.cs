@@ -1,20 +1,20 @@
-
+ï»¿
 using UnityEngine;
 namespace JACK
 {
     /// <summary>
-    /// ²Ä¤@¸}¥»
+    /// ç¬¬ä¸€è…³æœ¬
     /// </summary>
     public class FirstScript : MonoBehaviour
 
 
 
     {
-        #region ³æ¤@µù¸Ñ
+        #region å–®ä¸€è¨»è§£
 
-        // ³æ¦æµù¸Ñ
-        // ³æ¦æµù¸Ñ
-        /*¦h¦æµù¸Ñ
+        // å–®è¡Œè¨»è§£
+        // å–®è¡Œè¨»è§£
+        /*å¤šè¡Œè¨»è§£
         * 
         * 
         * 
@@ -22,24 +22,24 @@ namespace JACK
         */
         //A a
         #endregion
-        #region ¨Æ¥ó°Ï°ì
-        //³ê¿ô¨Æ¥ó
+        #region äº‹ä»¶å€åŸŸ
+        //å–šé†’äº‹ä»¶
         private void Awake()
         {
             print("game over");
         }
-        //¶}©l¨Æ¥ó
+        //é–‹å§‹äº‹ä»¶
         private void Start()
         {
-            print("<color=blue>¶}©l¨Æ¥ó</color>");
+            print("<color=blue>é–‹å§‹äº‹ä»¶</color>");
 
 
 
         }
-        //§ó·s
+        //æ›´æ–°
         private void Update()
         {
-            print("<color=green>§ó·s</color>");
+            print("<color=green>æ›´æ–°</color>");
 
 
         }
