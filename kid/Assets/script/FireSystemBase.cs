@@ -14,6 +14,16 @@ namespace JACK
         private GameObject prefabBullet;
         [SerializeField, Header("子彈生成點")]
         private Transform pointSpawn;
+
+        //自成子彈
+        //生成子彈
+        protected void SpawanBullet()
+        {
+            //實例化(生成物件，座標，角度)；
+            // 生成 子彈預製物 座標與角度跟生成點相同
+            Instantiate(prefabBullet, pointSpawn.position, pointSpawn.rotation);
+        
+        }
     }
 }
 

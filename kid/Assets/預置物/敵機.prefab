@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3113516712869630107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -1.26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3263691972666634226}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &3263691972666634239
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +44,9 @@ GameObject:
   - component: {fileID: 3263691972666634224}
   - component: {fileID: 3262174958889323508}
   - component: {fileID: 1224916749917188459}
-  m_Layer: 0
+  - component: {fileID: 1356571844}
+  - component: {fileID: 1356571850}
+  m_Layer: 7
   m_Name: "\u6575\u6A5F"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,3 +178,32 @@ CircleCollider2D:
   m_Offset: {x: 0.18, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &1356571844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263691972666634239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddf17b435d8de14990a75b91e3546e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 5079532762857433079, guid: 5a5b23d727505fe4e8079d96dd6abbde, type: 3}
+  pointSpawn: {fileID: 4293599973271289510}
+  interval: 1.5
+--- !u!114 &1356571850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263691972666634239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f64e988eceb6ee45875c09263a33687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabExplosin: {fileID: 6533069745285419306, guid: e5dfdfc4000b04e40bddad24d40bb349, type: 3}
+  nameTarget: "\u5B50\u5F48"
