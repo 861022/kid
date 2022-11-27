@@ -1,26 +1,35 @@
-
+ï»¿
 using UnityEngine;
 
 namespace JACK
 {
     /// <summary>
-    /// ¶Ë¨t²Î
+    /// å‚·ç³»çµ±
     /// </summary>
     public class DamageSystem : MonoBehaviour
     {
-        [SerializeField, Header("Ãz¬µ¹w»sª«")]
+        [SerializeField, Header("çˆ†ç‚¸é è£½ç‰©")]
         private GameObject prefabExplosin;
-        [SerializeField, Header("¸I¨ì·|Ãz¬µªº¦WºÙ")]
+        [SerializeField, Header("ç¢°åˆ°æœƒçˆ†ç‚¸çš„åç¨±")]
         private string nameTarget;
+        [Header("å—å‚·èˆ‡çˆ†ç‚¸éŸ³æ•ˆ")]
+        [SerializeField]
+        private AudioClip soundHit;
+        [SerializeField]
+        private AudioClip soundExplosion;
 
-        //¸I¼²¶}©l°õ¦æ¤@¦¸
+
+        //ç¢°æ’é–‹å§‹åŸ·è¡Œä¸€æ¬¡
         private void OnCollisionEnter2D(Collision2D collision)
         {
             print(collision.gameObject.name);
-            //¦pªG ¸I¨ìª«¥ó¦WºÙ ¥]§tnameaTarget´NÃz¬µ¨Ã§R°£
+            //å¦‚æœ ç¢°åˆ°ç‰©ä»¶åç¨± åŒ…å«nameaTargetå°±çˆ†ç‚¸ä¸¦åˆªé™¤
             if (collision.gameObject.name.Contains(nameTarget))
             {
                 Instantiate(prefabExplosin, transform.position, transform.rotation);
+
+                SoundManger.instance.Playsound(soundHit, new Vector2(0.7f, 0.9f));
+                SoundManger.instance.Playsound(soundExplosion, new Vector2(1.2f, 1.5f));
 
                 Destroy(gameObject);
             }

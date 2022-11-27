@@ -1,4 +1,4 @@
-
+ï»¿
 using UnityEngine;
 
 namespace JACK
@@ -6,23 +6,26 @@ namespace JACK
 
 
     /// <summary>
-    /// µo®g¨t²Î°ò©³
+    /// ç™¼å°„ç³»çµ±åŸºåº•
     /// </summary>
     public class FireSystemBase : MonoBehaviour
     {
-        [SerializeField, Header("¤l¼u¹w»sª«")]
+        [SerializeField, Header("å­å½ˆé è£½ç‰©")]
         private GameObject prefabBullet;
-        [SerializeField, Header("¤l¼u¥Í¦¨ÂI")]
+        [SerializeField, Header("å­å½ˆç”Ÿæˆé»")]
         private Transform pointSpawn;
+        [SerializeField, Header("ç™¼å°„éŸ³æ•ˆ")]
+        private AudioClip soundFire;
 
-        //¦Û¦¨¤l¼u
-        //¥Í¦¨¤l¼u
+        //è‡ªæˆå­å½ˆ
+        //ç”Ÿæˆå­å½ˆ
         protected void SpawanBullet()
         {
-            //¹ê¨Ò¤Æ(¥Í¦¨ª«¥ó¡A®y¼Ğ¡A¨¤«×)¡F
-            // ¥Í¦¨ ¤l¼u¹w»sª« ®y¼Ğ»P¨¤«×¸ò¥Í¦¨ÂI¬Û¦P
+            //å¯¦ä¾‹åŒ–(ç”Ÿæˆç‰©ä»¶ï¼Œåº§æ¨™ï¼Œè§’åº¦)ï¼›
+            // ç”Ÿæˆ å­å½ˆé è£½ç‰© åº§æ¨™èˆ‡è§’åº¦è·Ÿç”Ÿæˆé»ç›¸åŒ
             Instantiate(prefabBullet, pointSpawn.position, pointSpawn.rotation);
-        
+
+            SoundManger.instance.Playsound(soundFire, new Vector2(0.7f, 1.2f));
         }
     }
 }
